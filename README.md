@@ -37,3 +37,34 @@ build
 
 3 directories, 2 files
 ```
+
+## SSH-Agent
+
+You might need to enable SSH-Agent in order to connect with remote:
+
+List all your SSH keys
+```
+ssh-add -L
+The agent has no identities.
+```
+
+If no identities were detected, enable the agent first:
+```
+eval "$(ssh-agent -s)"
+Agent pid 8098
+```
+
+Add you SSH key:
+```
+ssh-add ~/.ssh/id_rsa
+Identity added: /home/vasi/.ssh/id_rsa (/home/vasi/.ssh/id_rsa)
+```
+
+List your keys again:
+```
+ssh-add -L
+ssh-rsa ...== /home/vasi/.ssh/id_rsa
+
+ssh-add -L
+
+```
