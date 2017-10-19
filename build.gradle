@@ -1,5 +1,13 @@
-    group 'org.foo'
-version '1.0-SNAPSHOT'
+buildscript {
+    repositories { jcenter() }
+    dependencies {
+        classpath 'com.netflix.nebula:nebula-release-plugin:6.0.0'
+    }
+}
+apply plugin: 'nebula.release'
+
+group 'org.foo'
+//version '1.0-SNAPSHOT'
 
 apply plugin: 'java'
 
